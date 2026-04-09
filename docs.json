@@ -1,0 +1,23 @@
+[
+    {
+        "doc_id": 1,
+        "content": "RAG是检索增强生成技术",
+        "doc_type": "txt",
+        "similarity": 0.9,
+        "embedding": []
+    },
+    {
+        "doc_id": 2,
+        "content": "Agent是智能体",
+        "doc_type": "md",
+        "similarity": 0.8,
+        "embedding": []
+    },
+    {
+        "doc_id": 3,
+        "content": "Python是AI常用语言",
+        "doc_type": "txt",
+        "similarity": 0.7,
+        "embedding": []
+    }
+]

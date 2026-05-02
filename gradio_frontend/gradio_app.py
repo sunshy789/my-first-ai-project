@@ -3,8 +3,8 @@ import requests
 import os
 import uuid
 import rag_backend.config as config
-# 本机访问，绝对稳定
-BACKEND_URL =  config.BACKEND_URL
+# 后端服务地址
+BACKEND_URL = config.BACKEND_URL
 AGENT_URL = config.AGENT_URL
 # 全局变量存储上传后的文档ID
 current_doc_id = ""
@@ -38,7 +38,7 @@ def chat_with_rag(message, history):
 
         # 处理响应
         if response.status_code == 200:
-            print("服务器返回：", response.text)  # 新增这行
+            print("服务器返回：", response.text)
             return response.text
         else:
             # 打印详细错误，方便排查
@@ -81,7 +81,7 @@ def load_file(file):
 
         # 获取文件名和文件类型
         file_name = os.path.basename(file)
-        # 自动识别文件类型，解决400错误
+        # 根据文件后缀判断 MIME 类型
         if file_name.lower().endswith(".pdf"):
             content_type = "application/pdf"
         elif file_name.lower().endswith(".txt"):
@@ -100,7 +100,7 @@ def load_file(file):
 
         # 处理响应
         if response.status_code == 200:
-            print("服务器返回：", response.text)  # 新增这行
+            print("服务器返回：", response.text)
             result = response.json()
             # 保存上传成功后的文档ID
             current_doc_id = result["data"]["doc_id"]

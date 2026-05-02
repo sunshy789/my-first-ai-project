@@ -11,7 +11,7 @@ import rag_backend.config as config
 redis_host = config.REDIS_HOST
 redis_client = redis.Redis(host=redis_host, port=config.REDIS_PORT, decode_responses=True)
 app = FastAPI()
-#存储每个会话的对话历史（生产环境应换为Redis） ？Redis是什么
+#存储每个会话的对话历史
 
 class ChatRequest(BaseModel):
     query:str

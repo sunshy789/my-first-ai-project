@@ -40,7 +40,7 @@ class LLMClient:
             'temperature': 0.3,
             'stream': False
         }
-        # 重试逻辑缩进修正，归属于chat方法
+        # 重试逻辑
         current_retry = 0
         while current_retry <= self.max_retries:
             try:

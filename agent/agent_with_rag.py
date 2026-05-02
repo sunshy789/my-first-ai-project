@@ -81,7 +81,7 @@ SYSTEM_PROMPT = """
 
 只返回 JSON，不要返回其他内容。
 """
-# ========== 4. 主流程（与昨天相同，无需修改） ==========
+# ========== 4. 主流程 ==========
 def run_agent(user_query: str,messages:list=None)->tuple[str,list]:
     """
     执行Agent对话
@@ -156,14 +156,6 @@ def run_agent(user_query: str,messages:list=None)->tuple[str,list]:
     messages.append({"role":"assistant","content":final_answer})
     return final_answer, messages
 
-# if __name__ == "__main__":
-#     # 测试两个场景
-#     print("=== 测试天气 ===")
-#     run_agent("上海天气怎么样？")
-#     print("\n=== 测试文档检索 ===")
-#     run_agent("太原理工大学是211吗？")
-#     print("\n=== 测试计算器 ===")
-#     run_agent("123 * 456 等于多少？")
 if __name__ == "__main__":
     msgs = None
     while True:

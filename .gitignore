@@ -1,0 +1,33 @@
+# 环境变量（含 API Key，绝不能提交）
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+
+# 日志
+*.log
+
+# 测试 & 实验脚本
+test_all/
+redis/
+eval_ragas.py
+eval_stable.py
+practice_from_memory.py
+
+# 个人笔记 & 文件
+待改进项.md
+面试题.md
+手写练习要点.md
+项目流程.txt
+项目稿.txt
+resume.md
+我的简历-IQT9JA.pdf
+垃圾/

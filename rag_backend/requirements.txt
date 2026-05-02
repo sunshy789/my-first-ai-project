@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+gradio
+requests
+pdfplumber
+sentence-transformers
+qdrant-client
+rank-bm25
+redis
+python-multipart
+python-dotenv
+langchain-openai
+pandas
